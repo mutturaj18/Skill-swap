@@ -5,11 +5,13 @@
 
 const express = require('express');
 const router = express.Router();
+
 const {
   createCourse,
   getAllCourses,
   getMyCourses
-} = require('../controllers/coursecontroller');
+} = require('../controllers/courseController');
+
 const { protect, isTeacher } = require('../middleware/authMiddleware');
 
 // Public routes
