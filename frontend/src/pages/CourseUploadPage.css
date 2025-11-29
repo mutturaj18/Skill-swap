@@ -1,0 +1,283 @@
+/* ============================================
+   FILE: frontend/src/pages/CourseUploadPage.css
+   Course upload page styles
+   ============================================ */
+
+.course-upload-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  padding: 3rem 0;
+}
+
+.upload-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.upload-header h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.upload-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Messages */
+.error-message, .success-message {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.success-message {
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+/* Form */
+.upload-form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.form-section h2 {
+  font-size: 1.75rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0;
+}
+
+.add-video-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.add-video-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Thumbnail Preview */
+.thumbnail-preview {
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.thumbnail-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video Items */
+.video-item {
+  background: linear-gradient(135deg, #667eea08 0%, #764ba208 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  border: 2px solid #e2e8f0;
+}
+
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.video-header h3 {
+  color: #667eea;
+  font-size: 1.25rem;
+}
+
+.remove-video-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-video-btn:hover {
+  background: #fecaca;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: white;
+  color: #64748b;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .course-upload-page {
+    padding: 2rem 0;
+  }
+
+  .upload-header h1 {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .add-video-btn {
+    justify-content: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
