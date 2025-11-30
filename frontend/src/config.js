@@ -1,1 +1,2 @@
+// API Configuration
 export const API_URL = 'https://skillswap-backend-crrn.onrender.com/api';

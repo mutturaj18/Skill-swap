@@ -38,7 +38,7 @@ const Dashboard = () => {
             Authorization: `Bearer ${token}`
           }
         });
-        setMyCourses(response.data);
+        setMyCourses(courses.data);
       } catch (error) {
         console.error('Error fetching courses:', error);
       } finally {
