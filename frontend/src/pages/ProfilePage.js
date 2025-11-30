@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Mail, MapPin, Award, Gift, Edit2, Save, X, Plus, Trash2 } from 'lucide-react';
 import axios from 'axios';
+import { API_URL } from '../config';
 import './ProfilePage.css';
 
 const ProfilePage = () => {
@@ -116,7 +117,7 @@ const ProfilePage = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        'http://localhost:5000/api/auth/profile',
+        `${API_URL}/auth/profile`,
         formData,
         {
           headers: {

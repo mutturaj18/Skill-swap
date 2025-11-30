@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import axios from 'axios';
+import { API_URL } from '../config'
 import './AuthPages.css';
 
 const LoginPage = () => {
@@ -33,7 +34,7 @@ const LoginPage = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const response = await axios.post(`${API_URL}/auth/login`, formData);
       
       // Save token to localStorage
       localStorage.setItem('token', response.data.token);

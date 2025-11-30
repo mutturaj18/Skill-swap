@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react';
 import axios from 'axios';
+import { API_URL } from '../config';
 import './AuthPages.css';
 
 const SignupPage = () => {
@@ -50,7 +51,7 @@ const SignupPage = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post(`${API_URL}/auth/register`, {
         username: formData.username,
         email: formData.email,
         password: formData.password,

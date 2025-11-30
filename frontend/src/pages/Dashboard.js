@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, Upload, Users, Award, Gift, TrendingUp } from 'lucide-react';
 import axios from 'axios';
+import { API_URL } from '../config';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -32,7 +33,7 @@ const Dashboard = () => {
 
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/courses/my-courses', {
+        const courses = await axios.get(`${API_URL}/courses/my-courses`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Upload, Plus, Trash2, Image, Video, Save, AlertCircle } from 'lucide-react';
 import axios from 'axios';
+import { API_URL } from '../config';
 import './CourseUploadPage.css';
 
 const CourseUploadPage = () => {
@@ -125,7 +126,7 @@ const CourseUploadPage = () => {
       const token = localStorage.getItem('token');
       
       const response = await axios.post(
-        'http://localhost:5000/api/courses/create',
+        `${API_URL}/courses/create`,
         {
           ...courseData,
           teacherName: user.username
