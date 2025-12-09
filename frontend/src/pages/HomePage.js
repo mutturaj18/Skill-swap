@@ -4,10 +4,12 @@
 // ============================================
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, Star, Users, Clock, BookOpen } from 'lucide-react';
 import './HomePage.css';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -220,8 +222,12 @@ const HomePage = () => {
               Join our community of passionate learners and teachers today!
             </p>
             <div className="cta-buttons">
-              <button className="btn btn-primary">Get Started Free</button>
-              <button className="btn btn-outline">Become a Teacher</button>
+              <button className="btn btn-primary" onClick={() => navigate('/signup')}>
+                Get Started Free
+              </button>
+              <button className="btn btn-outline" onClick={() => navigate('/signup')}>
+                Become a Teacher
+              </button>
             </div>
           </div>
         </div>
