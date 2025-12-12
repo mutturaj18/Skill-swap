@@ -73,6 +73,11 @@
   font-size: 1rem;
   padding: 0;
   background: transparent;
+  color: #1e293b; /* Dark text for visibility */
+}
+
+.search-input::placeholder {
+  color: #94a3b8; /* Light gray placeholder */
 }
 
 .search-btn {
@@ -96,6 +101,7 @@
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
+  margin-top: 4rem; /* Increased spacing from search bar */
 }
 
 .stat-item {
@@ -363,6 +369,7 @@
 
   .hero-stats {
     gap: 30px;
+    margin-top: 3rem;
   }
 
   .stat-number {
